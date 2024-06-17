@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MysticPartyTracker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+8568146909e9d746c5e97b01cadb2949a144478f")]
 [assembly: System.Reflection.AssemblyProductAttribute("MysticPartyTracker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MysticPartyTracker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

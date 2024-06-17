@@ -18,18 +18,21 @@ namespace MysticPartyTracker.ViewModel
         public SpellsViewModel()
         {
             _restService = new RestService();
+            FindSpellsAsyncCommand = new SpellCommand(); 
         }
 
 
         private ObservableCollection<Spells> _spells = new ObservableCollection<Spells>();
         public ObservableCollection<Spells> Spells
         {
-            get { return _spells; }
+           get { return _spells; }
            set { _spells = value; }
         }
         public ICommand FindSpellsAsyncCommand {  get; }
-        public async Task<ObservableCollection<Spells>> GetSpellsAsync()
+
+        public async Task<ObservableCollection<Spells>> SpellCommand()
         {
+            Spells spells = new Spells(string Index, string, name);
             return await _restService.GetSpellsAsync();
         }
     }

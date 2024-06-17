@@ -3,28 +3,49 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MysticPartyTracker.View.SpellsView"
              Title="SpellsView">
-    <VerticalStackLayout>
-        <CollectionView ItemsSource="{Binding Spells}" EmptyView="Sem Dados">
+    <VerticalStackLayout
+        Padding="30,0"
+        Spacing="25">
+
+
+        <Label 
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="Large"
+            Text="SpellsResult"/>
+
+        <Label 
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Text="{Binding Index}"/>
+
+        <Label 
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Text="{Binding Name}"/>
+
+
+        <Label 
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Text="{Binding Level}"/>
+
+        <Button
+               x:Name="SpellBtn"
+               Text="Gerar Spell" 
+               Command="{Binding SpellCommand}"
+               HorizontalOptions="Fill" />
+
+        <CollectionView ItemsSource="{Binding PreviousSpells}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <VerticalStackLayout>
-
-                        <HorizontalStackLayout>
-                            <Label
-                                Text="Feitiços" />
-
-                            <Label Text="{Binding Results}" />
-
-                        </HorizontalStackLayout>
+                        <Label Text="{Binding}"/>
                     </VerticalStackLayout>
-
-
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
 
-        <Button Text="Buscar Magias"
-                Command="{Binding FindSpellsAsyncCommand}"
-                   x:Name="SpellsBtn" />
+
     </VerticalStackLayout>
 </ContentPage>
